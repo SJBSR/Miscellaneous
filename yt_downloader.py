@@ -1,4 +1,3 @@
-python3 -m pip install pytube
 from pytube import YouTube
 from sys import argv
 
