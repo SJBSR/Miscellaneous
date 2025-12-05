@@ -36,7 +36,7 @@ def create_amazon_linux_2023_instance(client: boto3.client) -> None:
                 ImageId=ami_id,
                 MinCount=instance_count,
                 MaxCount=instance_count,
-                InstanceType='t2.micro'  # You may want to make this configurable
+                InstanceType='t2.micro'    # You may want to make this configurable
             )
             instance_ids = [instance['InstanceId'] for instance in response['Instances']]
             print(f"Successfully created {len(instance_ids)} instance(s): {instance_ids}")
